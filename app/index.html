@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chill n' Sound - Relax with the sounds of Nautre</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description" content="Relax with sounds of nature! Play and Mix Ambient sounds to boost concentration and productivity. Create your perfect enviroment.">
+   
+    <meta name="keywords" content="Stefan, Petrović, Petrovic, sounds, nature sounds, chill, play, mix, boost, productivity, improve, concentration, ambient, enviroment, soundbord, zen, calming, calm">
+
+    <meta name="author" content="Stefan Petrović">
+
+    <!-- Favicon -->
+	<link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- FB meta tags -->
+	<meta property="og:type"          content="website" />
+	<meta property="og:url"           content="https://chillnsound.petrovicstefan.rs" />
+	<meta property="og:title"         content="Chill n' Sound - Relax with the sounds of Nautre" />
+	<meta property="og:description"   content="Relax with sounds of nature! Play and Mix Ambient sounds to boost concentration and productivity. Create your perfect enviroment." />
+	<meta property="og:image"         content="http://chillnsound.petrovicstefan.rs/images/socialpreview.png" />
+	<meta property="og:image:width" content="747" />
+	<meta property="og:image:height" content="200" />
+
+	<!-- Twiter meta tags -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@stefanpetr_dpi" />
+	<meta name="twitter:title" content="Chill n' Sound - Relax with the sounds of Nautre" />
+	<meta name="twitter:description" content="Relax with sounds of nature! Play and Mix Ambient sounds to boost concentration and productivity. Create your perfect enviroment." />
+	<meta name="twitter:image" content="http://chillnsound.petrovicstefan.rs/images/socialpreview.png" />
+
+	<!--build:css css/styles.min.css-->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<!--endbuild-->
+
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<script>window.twttr = (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0],
+	    t = window.twttr || {};
+	  if (d.getElementById(id)) return t;
+	  js = d.createElement(s);
+	  js.id = id;
+	  js.src = "https://platform.twitter.com/widgets.js";
+	  fjs.parentNode.insertBefore(js, fjs);
+
+	  t._e = [];
+	  t.ready = function(f) {
+	    t._e.push(f);
+	  };
+
+	  return t;
+	}(document, "script", "twitter-wjs"));</script>
+
+	<header>
+		<h1>Chill n' Sound</h1>
+		<p class="desc">
+			Relax with the sounds of nature! </br>Play and Mix Ambient sounds to boost concentration and productivity.
+		</p>
+	</header>
+	<section id="top_control">
+		<div class="mute_btn">
+			<a href="#!">
+				<i class="fa fa-volume-up unmuted" aria-hidden="true"></i>
+				<i class="fa fa-volume-off muted" aria-hidden="true"></i>
+			</a>
+		</div>
+
+		<div class="reset_btn">
+			<a href="#!">
+				<i class="fa fa-refresh" aria-hidden="true"></i>
+			</a>
+		</div>
+		
+		<div class="control_container">
+			<div class="clock">
+				<div class="time_block">
+					<div class="date">
+						<span class="month">JAN</span>
+						<span class="day">MON</span>
+					</div>
+					<div class="time">
+						<span class="hours">00</span>
+						<span class="separator">:</span>
+						<span class="minutes">00</span>
+						<!-- <sup>
+							<span class="separator">:</span>
+							<span class="seconds">00</span>
+						</sup> -->
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+	<section id="main">
+
+		<div class="sounds_container">
+
+			<!-- RAIN -->
+			<div class="sound_block">
+				
+				<audio>
+					<source src="sounds/rain.ogg" type="audio/ogg">
+				</audio>
+				<div class="start_btn"><img src="images/rain.png" alt="Rain Sounds"><a class="play" href="#!"></a></div>
+				<input class="volume_bar" type="range" value="0" max="1" step="0.001">
+			</div>
+
+			<!-- THUNDER -->
+			<div class="sound_block">
+				
+				<audio>
+					<source src="sounds/thunder.ogg" type="audio/ogg">
+				</audio>
+				<div class="start_btn"><img src="images/thunder.png" alt="Thunder Sound"><a class="play" href="#!"></a></div>
+				<input class="volume_bar" type="range" value="0" max="1" step="0.001">
+			</div>
+
+			<!-- FOREST -->
+			<div class="sound_block">
+				
+				<audio>
+					<source src="sounds/forest.ogg" type="audio/ogg">
+				</audio>
+				<div class="start_btn"><img src="images/forest.png" alt="Forest Sounds"><a class="play" href="#!"></a></div>
+				<input class="volume_bar" type="range" value="0" max="1" step="0.001">
+			</div>
+
+			<!-- LEAVES -->
+			<div class="sound_block">
+				
+				<audio>
+					<source src="sounds/leaves.ogg" type="audio/ogg">
+				</audio>
+				<div class="start_btn"><img src="images/leaves.png" alt="Leaves in Wind Sound"><a class="play" href="#!"></a></div>
+				<input class="volume_bar" type="range" value="0" max="1" step="0.001">
+			</div>
+
+			<!-- DROPS -->
+			<div class="sound_block">
+				
+				<audio>
+					<source src="sounds/drops.ogg" type="audio/ogg">
+				</audio>
+				<div class="start_btn"><img src="images/drop.png" alt="Drops Sound"><a class="play" href="#!"></a></div>
+				<input class="volume_bar" type="range" value="0" max="1" step="0.001">
+			</div>
+
+			<!-- FIRE -->
+			<div class="sound_block">
+				
+				<audio>
+					<source src="sounds/fire.ogg" type="audio/ogg">
+				</audio>
+				<div class="start_btn"><img src="images/fire.png" alt="Fire Sound"><a class="play" href="#!"></a></div>
+				<input class="volume_bar" type="range" value="0" max="1" step="0.001">
+			</div>
+
+			<!-- CAT -->
+			<div class="sound_block">
+				
+				<audio>
+					<source src="sounds/cat_purr.ogg" type="audio/ogg">
+				</audio>
+				<div class="start_btn"><img src="images/catpurr.png" alt="Cat Purr Sound"><a class="play" href="#!"></a></div>
+				<input class="volume_bar" type="range" value="0" max="1" step="0.001">
+			</div>
+
+			<!-- SHEEP -->
+			<div class="sound_block">
+				
+				<audio>
+					<source src="sounds/sheep.ogg" type="audio/ogg">
+				</audio>
+				<div class="start_btn"><img src="images/sheep.png" alt="Sheep Sound"><a class="play" href="#!"></a></div>
+				<input class="volume_bar" type="range" value="0" max="1" step="0.001">
+			</div>
+
+			<!-- BIRDS -->
+			<div class="sound_block">
+				
+				<audio>
+					<source src="sounds/birds.ogg" type="audio/ogg">
+				</audio>
+				<div class="start_btn"><img src="images/bird.png" alt="Bird Sounds"><a class="play" href="#!"></a></div>
+				<input class="volume_bar" type="range" value="0" max="1" step="0.001">
+			</div>
+
+			<!-- BEACH -->
+			<div class="sound_block">
+				
+				<audio>
+					<source src="sounds/beach.ogg" type="audio/ogg">
+				</audio>
+				<div class="start_btn"><img src="images/beach.png" alt="Beach Sounds"><a class="play" href="#!"></a></div>
+				<input class="volume_bar" type="range" value="0" max="1" step="0.001">
+			</div>
+
+			<!-- RIVER -->
+			<div class="sound_block">
+				
+				<audio>
+					<source src="sounds/river.ogg" type="audio/ogg">
+				</audio>
+				<div class="start_btn"><img src="images/river.png" alt="River Sounds"><a class="play" href="#!"></a></div>
+				<input class="volume_bar" type="range" value="0" max="1" step="0.001">
+			</div>
+
+			<!-- WINDCHIMES -->
+			<div class="sound_block">
+				
+				<audio>
+					<source src="sounds/windchimes.ogg" type="audio/ogg">
+				</audio>
+				<div class="start_btn"><img src="images/windchimes.png" alt="Windchimes Sound"><a class="play" href="#!"></a></div>
+				<input class="volume_bar" type="range" value="0" max="1" step="0.001">
+			</div>
+
+			<!-- PINK NOISE -->
+			<div class="sound_block">
+				
+				<audio>
+					<source src="sounds/pinknoise.ogg" type="audio/ogg">
+				</audio>
+				<div class="start_btn"><img src="images/pinknoise.png" alt="Pink Noise Sound"><a class="play" href="#!"></a></div>
+				<input class="volume_bar" type="range" value="0" max="1" step="0.001">
+			</div>
+
+			<!-- BROWN NOISE -->
+			<div class="sound_block">
+				
+				<audio>
+					<source src="sounds/brownnoise.ogg" type="audio/ogg">
+				</audio>
+				<div class="start_btn"><img src="images/brownnoise.png" alt="Brown Noise Sound"><a class="play" href="#!"></a></div>
+				<input class="volume_bar" type="range" value="0" max="1" step="0.001">
+			</div>
+		</div>
+	</section>
+	<div class="git_ribbon">
+		<a href="https://your-url" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#F2994A; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+		</a>
+	</div>
+	
+	<footer>
+		<div class="footer_container">
+			<span class="licence">
+				The source code for this app is released under <a href="https://opensource.org/licenses/MIT">MIT Licence</a> and can be found on <a href="#githublink">Github</a>.</br> Feel free to fork this project and let me know if you make something awesome!
+			</span>
+			<span class="made_with">
+				Made with <i class="fa fa-heart" aria-hidden="true"></i> and <i class="fa fa-coffee" aria-hidden="true"></i>
+			</span>
+			<span class="copyright">
+				Copyright © 2017 by <a href="https://petrovicstefan.rs">Petrovic Stefan</a> | All rights reserved.
+			</span>
+		</div>
+
+		<div class="social_icons">
+			<span class="share_icn fb_btn">
+				<div class="fb-share-button" data-href="https://chillnsound.petrovicstefan.rs" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchillnsound.petrovicstefan.rs%2F&amp;src=sdkpreparse">Share</a></div>
+			</span>
+			<span class="share_icn">
+				<a class="twitter-share-button"
+				  href="https://twitter.com/intent/tweet?text=Chill%20n'%20Sound%20-%20Relax%20With%20the%20Sounds%20of%20Nature!">
+				Tweet</a>
+			</span>
+		</div>
+
+		<!--FontAwesome-->
+		<script src="https://use.fontawesome.com/11fc9055ad.js"></script>	
+
+		<!--build:js js/main.min.js -->
+		<script src="js/main.js"></script>
+		<!-- endbuild -->
+	</footer>
+</body>
+</html>

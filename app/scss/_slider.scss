@@ -1,0 +1,125 @@
+// from https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+
+// * * * COLORS * * *
+
+$color_fill:    white; // green
+$font-size:      1em;    // <--- change the font size to change the size
+
+// dark version
+//@color_default: rgba(0,0,0,.2);
+//@color_hover:   rgba(0,0,0,.3);
+//@color_active:  rgba(0,0,0,.5);
+
+// light version
+$color_default: rgba(255,255,255,.5);
+$color_hover:   rgba(255,255,255,.7);
+$color_active:  rgba(255,255,255,1);
+
+
+input[type=range] {
+  box-sizing: border-box;
+  font-size: $font-size;
+  line-height: 0.5em;
+  height: 0.5em;
+  background-color: transparent;
+  cursor: pointer;
+
+  // * * * RESET * * *
+
+  -webkit-appearance: none;
+  width: 50%;
+  max-width: 150px;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  &:focus {
+    outline: none;
+  }
+  &::-ms-track {
+    width: 50%;
+    max-width: 200px;
+    cursor: pointer;
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+  // * * * TRUMP * * *
+  @mixin mx-trange-trump(){
+    width: 1em;
+    height: 1em;
+    margin-top: -4px;
+    background-color: $color_fill;
+    border-radius: 50%;
+    border: 0 solid $color_default;
+    cursor: pointer;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @include mx-trange-trump();
+  }
+
+  &::-moz-range-thumb {
+    @include mx-trange-trump();
+  }
+
+  &::-ms-thumb {
+    @include mx-trange-trump();
+  }
+
+  &:hover{
+    &::-webkit-slider-thumb { border-color: $color_hover; }
+    &::-moz-range-thumb     { border-color: $color_hover; }
+    &::-ms-thumb            { border-color: $color_hover; }
+  }
+
+  //&:focus,
+  &:active{
+    &::-webkit-slider-thumb { border-color: $color_active; }
+    &::-moz-range-thumb     { border-color: $color_active; }
+    &::-ms-thumb            { border-color: $color_active; }
+  }
+
+  // * * * TRACK * * *
+
+  @mixin mx-range-track(){
+    width: 50%;
+    max-width: 150px;
+    cursor: pointer;
+    height: 2px;
+    border-bottom: 4px solid $color_default;
+    background-color: transparent;
+  }
+
+
+  &::-webkit-slider-runnable-track {
+    @include mx-range-track();
+  }
+
+  &:focus::-webkit-slider-runnable-track {
+
+  }
+
+  &::-moz-range-track {
+    @include mx-range-track()
+  }
+
+  &::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  &::-ms-fill-lower {
+
+  }
+  &:focus::-ms-fill-lower {
+
+  }
+  &::-ms-fill-upper {
+
+  }
+  &:focus::-ms-fill-upper {
+
+  }
+}
