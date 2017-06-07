@@ -12,6 +12,7 @@
 /* Media Queries */
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,400,700");
 input[type=range] {
+  transition: opacity 2s;
   box-sizing: border-box;
   font-size: 1em;
   line-height: 0.5em;
@@ -438,3 +439,6 @@ header {
   header p {
     line-height: 1.5em;
     padding-bottom: 2em; }
+
+.volume_bar {
+  opacity: 0; }

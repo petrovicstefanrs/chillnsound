@@ -18,6 +18,7 @@ var volume_control=document.querySelectorAll('.volume_bar');
 // Adding listeners to every volume control slider		
 for (var i = 0; i < volume_control.length; i++) {
 	volume_control[i].addEventListener("input", volumeSound, false);		
+	volume_control[i].style.opacity=0;
 }
 
 // DOM element that mutes and unmutes the page
@@ -41,6 +42,7 @@ function playSound(e){
 	var soundImage = targetElement.parentElement.parentElement.querySelector('img');
 
 	if(selectedSound.paused){
+		volumeControler.style.opacity=1;
 		selectedSound.loop=true;
 		if (volumeControler.value==0) {
 			volumeControler.value=0.1;
@@ -50,6 +52,7 @@ function playSound(e){
 		soundImage.classList.add("playing");	
 	}
 	else{
+		volumeControler.style.opacity=0;
 		selectedSound.pause();
 		selectedSound.currentTime = 0;
 		volumeControler.value=0;
@@ -125,5 +128,6 @@ function resetSounds() {
 	var all_volume_control = document.querySelectorAll('.volume_bar');	
 	for (var i = 0; i < all_volume_control.length; i++) {
 		all_volume_control[i].value=0;
+		all_volume_control[i].style.opacity=0;
 	}
 }

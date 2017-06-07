@@ -17,6 +17,7 @@ $color_active:  rgba(255,255,255,1);
 
 
 input[type=range] {
+  transition: opacity 2s;
   box-sizing: border-box;
   font-size: $font-size;
   line-height: 0.5em;
