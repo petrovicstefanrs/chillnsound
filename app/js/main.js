@@ -1,3 +1,33 @@
+//DOM Elements with sound
+var all_sounds = document.querySelectorAll('audio');
+
+for (var i = 0; i < all_sounds.length; i++) {
+	all_sounds[i].addEventListener("canplaythrough", loadedSounds, false);
+}
+
+var loaded=0;
+var percent=0;
+function loadedSounds(e) {
+	loaded++; // Increment loaded counter to check if all sounds can be played
+	percent = Math.floor(100 * loaded / all_sounds.length); // Calculate percentage
+	document.querySelector('.load_status').innerText = percent+"%"; // Set textual percentage to load status
+	document.querySelector('.load_fill').style.width= percent+"%";
+
+	//console.log(percent);
+	if (loaded == all_sounds.length) {
+		//alert('Loaded!');
+		setTimeout(fadeOutLoader, 1000);
+	}
+
+	function fadeOutLoader() {
+		var fadeTarget = document.getElementById("load_screen");
+		fadeTarget.style.opacity = 0;
+		setTimeout(function(){	// Remove node
+			document.querySelector('body').removeChild(fadeTarget);
+		},2000);
+	}
+}
+
 // DOM Elements for clock control
 var hours = document.querySelector('.hours');
 var minutes = document.querySelector('.minutes');

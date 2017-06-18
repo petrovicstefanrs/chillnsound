@@ -1,6 +1,7 @@
 @import '_variables';
 @import '_mixins';
 @import '_slider';
+@import '_loader';
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700');
 
 body{
@@ -11,6 +12,44 @@ body{
 	background: #F2994A;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to top, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to top, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#load_screen{
+	transition: opacity 1s;
+	position: fixed;
+	z-index: 999;
+	color: $color-bright;
+	font-weight: 700;
+	font-size: 1em;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: #F2994A;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	.loader_wrap{
+		text-align: center;
+		.loader{
+			margin: 0 auto;
+			margin-bottom: 2em;
+		}
+		.load_bar{
+			overflow: hidden;
+			background:rgba(255,255,255,0.3);
+			height: 0.5em;
+			border-radius: 1em;
+			margin-bottom: 1em;
+			width: 200px;
+			.load_fill{
+				background: $color-bright;
+				height: 100%;
+				width: 0%;
+				transition: all 0.2s;
+			}
+		}
+		@include center_cont;
+	}
 }
 
 .header{
