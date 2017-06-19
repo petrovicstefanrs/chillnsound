@@ -297,14 +297,29 @@ footer{
 	.social_icons{
 		height: 50px;
 		display: flex;
+		flex-wrap: wrap;
 	    justify-content: center;
 	    align-items: center;
 	    .share_icn{
-	    	width: auto;   
+	    	width: auto;
 	    }
 	    .fb_btn{
 	    	padding-right: 20px;
 	    	height: 22px;
+	    }
+	    .paypal-button{
+	    	position: relative;
+	    	text-align: center;
+	    	font-size: 0.9em;
+	    	padding: 4px 0;
+		    box-sizing: border-box;
+		    display: inline-block;
+		    border-radius: 3px;
+		    min-width: 75px;
+		    margin-left: 20px;
+		    background: #F44336;
+		    text-decoration: none;
+		    transform: translateY(-1px);
 	    }
 	}
 	a{
@@ -317,14 +332,12 @@ footer{
 		line-height: 2em;
 		color: white;
 		@include flexgrid(1, 1em);	
-		margin: 0 4em 1em 4em;
-		padding-bottom:1em;
+		margin: 0 4em 0em 4em;
 		min-height: 100px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		border-bottom: 1px solid rgba(255,255,255,0.5);
 		a{
 			text-decoration: none;
 			border-bottom: 1px dotted;
@@ -337,6 +350,9 @@ footer{
 			.fa-heart{
 				color: rgb(217, 30, 24);
 			}
+		}
+		.copyright{
+			border-bottom: 1px solid rgba(255,255,255,0.5);
 		}
 
 	}
