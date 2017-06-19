@@ -16,6 +16,9 @@ function loadedSounds(e) {
 	//console.log(percent);
 	if (loaded == all_sounds.length) {
 		//alert('Loaded!');
+		for (var i = 0; i < all_sounds.length; i++) {
+			all_sounds[i].removeEventListener("canplaythrough", loadedSounds);
+		}
 		setTimeout(fadeOutLoader, 1000);
 	}
 
