@@ -3,6 +3,7 @@ var all_sounds = document.querySelectorAll('audio');
 
 for (var i = 0; i < all_sounds.length; i++) {
 	all_sounds[i].addEventListener("canplaythrough", loadedSounds, false);
+	all_sounds[i].load();	// Force reload in case some audio files already loaded to avoid stuck loading screen
 }
 
 var loaded=0;
@@ -21,14 +22,14 @@ function loadedSounds(e) {
 		}
 		setTimeout(fadeOutLoader, 1000);
 	}
+}
 
-	function fadeOutLoader() {
-		var fadeTarget = document.getElementById("load_screen");
-		fadeTarget.style.opacity = 0;
-		setTimeout(function(){	// Remove node
-			document.querySelector('body').removeChild(fadeTarget);
-		},2000);
-	}
+function fadeOutLoader() {
+	var fadeTarget = document.getElementById("load_screen");
+	fadeTarget.style.opacity = 0;
+	setTimeout(function(){	// Remove node
+		document.querySelector('body').removeChild(fadeTarget);
+	},2000);
 }
 
 // DOM Elements for clock control
