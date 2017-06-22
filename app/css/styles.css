@@ -630,3 +630,23 @@ header {
 
 .volume_bar {
   opacity: 0; }
+
+.chrome_ext_btn {
+  font-size: 1.2em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  justify-content: center; }
+  .chrome_ext_btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 250px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid white !important; }
+  .chrome_ext_btn .fa {
+    font-size: 2.5em;
+    padding-right: 10px; }
