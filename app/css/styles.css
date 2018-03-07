@@ -229,11 +229,11 @@ body {
   overflow: auto;
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
-  background: #F2994A;
+  background: #f2994a;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #F2C94C, #F2994A);
+  background: -webkit-linear-gradient(to top, #f2c94c, #f2994a);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #F2C94C, #F2994A);
+  background: linear-gradient(to top, #f2c94c, #f2994a);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 #load_screen {
@@ -247,11 +247,11 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #F2994A;
+  background: #f2994a;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #F2C94C, #F2994A);
+  background: -webkit-linear-gradient(to top, #f2c94c, #f2994a);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #F2C94C, #F2994A);
+  background: linear-gradient(to top, #f2c94c, #f2994a);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   #load_screen .loader_wrap {
     text-align: center;
@@ -567,7 +567,7 @@ footer {
       border-radius: 3px;
       min-width: 75px;
       margin-left: 20px;
-      background: #F44336;
+      background: #f44336;
       text-decoration: none;
       transform: translateY(-1px); }
   footer a {
@@ -631,14 +631,20 @@ header {
 .volume_bar {
   opacity: 0; }
 
-.chrome_ext_btn {
+.footer_buttons {
+  display: flex;
+  justify-content: center; }
+
+.footer_btn {
+  position: relative;
   font-size: 1.2em;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
   display: flex;
-  justify-content: center; }
-  .chrome_ext_btn a {
+  justify-content: center;
+  margin: 20px; }
+  .footer_btn > a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -647,6 +653,8 @@ header {
     height: 60px;
     border-radius: 5px;
     border: 1px solid white !important; }
-  .chrome_ext_btn .fa {
+  .footer_btn .fa {
     font-size: 2.5em;
     padding-right: 10px; }
+  .footer_btn sub {
+    position: absolute; }
