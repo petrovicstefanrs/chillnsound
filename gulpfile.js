@@ -1,14 +1,14 @@
-import gulp from 'gulp';
-import sass from 'gulp-sass';
-import browserSync from 'browser-sync';
-import useref from 'gulp-useref';
-import uglify from 'gulp-uglify';
-import gulpIf from 'gulp-if';
-import cssnano from 'gulp-cssnano';
-import imagemin from 'gulp-imagemin';
-import cache from 'gulp-cache';
-import del from 'del';
-import runSequence from 'run-sequence';
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const browserSync = require('browser-sync');
+const useref = require('gulp-useref');
+const uglify = require('gulp-uglify');
+const gulpIf = require('gulp-if');
+const cssnano = require('gulp-cssnano');
+const imagemin = require('gulp-imagemin');
+const cache = require('gulp-cache');
+const del = require('del');
+const runSequence = require('run-sequence');
 // Development Tasks
 // -----------------
 
