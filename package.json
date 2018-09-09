@@ -7,8 +7,9 @@
     "build": "gulp build",
     "dev": "gulp",
     "e2e": "testcafe chrome ./test/index.e2e.js",
+    "lint": "eslint .",
     "start": "gulp",
-    "test": "yarn e2e"
+    "test": "yarn build && yarn e2e"
   },
   "author": "Stefan Petrovic",
   "license": "MIT",
