@@ -16,7 +16,7 @@ const runSequence = require('run-sequence');
 gulp.task('browserSync', () => {
   browserSync({
     server: {
-      baseDir: 'src'
+      baseDir: '.'
     }
   });
 });
@@ -31,7 +31,7 @@ gulp.task('sass', () => gulp.src('src/scss/**/*.scss') // Gets all files ending 
 // Watchers
 gulp.task('watch', () => {
   gulp.watch('src/scss/**/*.scss', ['sass']);
-  gulp.watch('src/*.html', browserSync.reload);
+  gulp.watch('*.html', browserSync.reload);
   gulp.watch('src/js/**/*.js', browserSync.reload);
 });
 
