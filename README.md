@@ -1,5 +1,6 @@
 # Chill n' Sound
 <a href="http://chillnsound.petrovicstefan.rs/">Check Out Chill N' Sound</a>
+[![Build Status](https://travis-ci.org/amilajack/chillnsound.svg?branch=master&maxAge=2592)](https://travis-ci.org/amilajack/chillnsound) [![Greenkeeper badge](https://badges.greenkeeper.io/amilajack/chillnsound.svg)](https://greenkeeper.io/)
 
 Relax with the sounds of nature!  Play and Mix Ambient sounds to boost concentration and productivity.
 
