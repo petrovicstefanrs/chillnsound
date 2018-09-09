@@ -16,37 +16,37 @@ const runSequence = require('run-sequence');
 gulp.task('browserSync', () => {
   browserSync({
     server: {
-      baseDir: 'app'
+      baseDir: 'src'
     }
   });
 });
 
-gulp.task('sass', () => gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+gulp.task('sass', () => gulp.src('src/scss/**/*.scss') // Gets all files ending with .scss in src/scss and children dirs
   .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
-  .pipe(gulp.dest('app/css')) // Outputs it in the css folder
+  .pipe(gulp.dest('src/css')) // Outputs it in the css folder
   .pipe(browserSync.reload({ // Reloading with Browser Sync
     stream: true
   })));
 
 // Watchers
 gulp.task('watch', () => {
-  gulp.watch('app/scss/**/*.scss', ['sass']);
-  gulp.watch('app/*.html', browserSync.reload);
-  gulp.watch('app/js/**/*.js', browserSync.reload);
+  gulp.watch('src/scss/**/*.scss', ['sass']);
+  gulp.watch('src/*.html', browserSync.reload);
+  gulp.watch('src/js/**/*.js', browserSync.reload);
 });
 
 // Optimization Tasks
 // ------------------
 
 // Optimizing CSS and JavaScript
-gulp.task('useref', () => gulp.src('app/*.html')
+gulp.task('useref', () => gulp.src('src/*.html')
   .pipe(useref())
   .pipe(gulpIf('*.js', uglify()))
   .pipe(gulpIf('*.css', cssnano()))
   .pipe(gulp.dest('dist')));
 
 // Optimizing Images
-gulp.task('images', () => gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+gulp.task('images', () => gulp.src('src/images/**/*.+(png|jpg|jpeg|gif|svg)')
   // Caching images that ran through imagemin
   .pipe(cache(imagemin({
     interlaced: true
@@ -54,11 +54,11 @@ gulp.task('images', () => gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
   .pipe(gulp.dest('dist/images')));
 
 // Copying fonts
-gulp.task('fonts', () => gulp.src('app/fonts/**/*')
+gulp.task('fonts', () => gulp.src('src/fonts/**/*')
   .pipe(gulp.dest('dist/fonts')));
 
 // Copying sounds
-gulp.task('sounds', () => gulp.src('app/sounds/**/*')
+gulp.task('sounds', () => gulp.src('src/sounds/**/*')
   .pipe(gulp.dest('dist/sounds')));
 
 // Cleaning

@@ -5,14 +5,18 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
+    "dev": "gulp",
+    "e2e": "testcafe chrome ./test/index.e2e.js",
     "start": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "yarn e2e"
   },
   "author": "Stefan Petrovic",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.24.7",
     "del": "^3.0.0",
+    "eslint": "^5.5.0",
+    "eslint-config-bliss": "^2.3.0",
     "gulp": "^3.9.1",
     "gulp-cache": "^1.0.2",
     "gulp-cssnano": "^2.1.3",
