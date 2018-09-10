@@ -1,0 +1,18 @@
+sudo: required
+
+addons:
+  chrome: stable
+  sauce_connect: true
+
+language: node_js
+
+node_js:
+  - node
+
+cache: yarn
+
+before_install: yarn global add greenkeeper-lockfile
+
+before_script: greenkeeper-lockfile-update
+
+after_script: greenkeeper-lockfile-upload
