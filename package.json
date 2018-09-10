@@ -1,19 +1,24 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
   "description": "",
+  "license": "MIT",
+  "author": "Stefan Petrovic",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
+    "precommit": "lint-staged",
     "dev": "gulp",
     "e2e": "testcafe chrome ./test/index.e2e.js",
     "lint": "eslint .",
     "start": "gulp",
     "test": "yarn build && yarn e2e"
   },
-  "author": "Stefan Petrovic",
-  "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-flow-comments": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
     "browser-sync": "^2.24.7",
     "del": "^3.0.0",
     "eslint": "^5.5.0",
@@ -26,7 +31,38 @@
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.1",
     "gulp-useref": "^3.1.5",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "parcel-bundler": "^1.9.7",
+    "prettier": "^1.14.2",
+    "prettier-package-json": "^2.0.0",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-hot-loader": "^4.3.6",
     "run-sequence": "^2.2.1",
     "testcafe": "^0.22.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --ignore-path .eslintignore --write",
+      "git add"
+    ],
+    "*.json|.{babelrc,eslintrc,prettierrc,stylelintrc}": [
+      "prettier --ignore-path .eslintignore --parser json --write",
+      "git add"
+    ],
+    "*.{css,scss}": [
+      "prettier --ignore-path .eslintignore --write",
+      "git add"
+    ],
+    "*.{yml,less,md}": [
+      "prettier --ignore-path .eslintignore --write",
+      "git add"
+    ],
+    "package.json": [
+      "prettier-package-json --write",
+      "git add"
+    ]
   }
 }
