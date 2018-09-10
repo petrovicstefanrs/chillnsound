@@ -6,12 +6,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build",
+    "build": "parcel build index.html",
     "precommit": "lint-staged",
-    "dev": "gulp",
+    "dev": "parcel index.html --open",
     "e2e": "testcafe chrome ./test/index.e2e.js",
     "lint": "eslint .",
-    "start": "gulp",
     "test": "yarn build && yarn e2e"
   },
   "devDependencies": {
@@ -19,6 +18,7 @@
     "@babel/plugin-transform-flow-comments": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
     "browser-sync": "^2.24.7",
     "del": "^3.0.0",
     "eslint": "^5.5.0",
