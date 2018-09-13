@@ -4,21 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "dev": "gulp",
+    "e2e": "testcafe chrome ./test/index.e2e.js",
+    "lint": "eslint .",
+    "start": "gulp",
+    "test": "yarn build && yarn e2e"
   },
   "author": "Stefan Petrovic",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.18.11",
-    "del": "^2.2.2",
+    "browser-sync": "^2.24.7",
+    "del": "^3.0.0",
+    "eslint": "^5.5.0",
+    "eslint-config-bliss": "^2.3.0",
     "gulp": "^3.9.1",
-    "gulp-cache": "^0.4.6",
-    "gulp-cssnano": "^2.1.2",
+    "gulp-cache": "^1.0.2",
+    "gulp-cssnano": "^2.1.3",
     "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.2.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.1.2",
-    "gulp-useref": "^3.1.2",
-    "run-sequence": "^1.2.2"
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-useref": "^3.1.5",
+    "run-sequence": "^2.2.1",
+    "testcafe": "^0.22.0"
   }
 }
