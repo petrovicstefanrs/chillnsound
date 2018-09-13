@@ -1,5 +1,7 @@
 sudo: required
 
+os: osx
+
 addons:
   chrome: stable
   sauce_connect: true
